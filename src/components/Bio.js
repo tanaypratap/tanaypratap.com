@@ -22,19 +22,20 @@ function Bio() {
               alt={author}
               style={{
                 marginRight: rhythm(1 / 2),
-                marginBottom: 0,
+                marginBottom: 30,
                 minWidth: 50,
                 borderRadius: `100%`,
+                alignSelf: 'center'
               }}
               imgStyle={{
                 borderRadius: `50%`,
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+              Written by <strong>{author}</strong> who lives in Bangalore and works @Microsoft
+              building the next generation collaboration tool i.e. MS Teams.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              <a target="_blank" href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
               </a>
             </p>
