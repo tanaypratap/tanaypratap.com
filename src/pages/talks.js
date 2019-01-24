@@ -1,29 +1,45 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import { rhythm } from '../utils/typography';
-import SEO from '../components/seo';
-import Bio from '../components/Bio';
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
+import { rhythm } from '../utils/typography'
 
 class TalksIndex extends React.Component {
     render() {
         const { data } = this.props
         const siteTitle = data.site.siteMetadata.title
+        const posts = data.allMarkdownRemark.edges
         return (
             <Layout location={this.props.location} title={"Talks"} siteTitle={siteTitle}>
                 <SEO
-                    title="All posts"
+                    title="Talks"
                     keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]}
                 />
-                <h3
-                 style={{ marginBottom: rhythm(1/4)}}>
-                 Talk 1
-                 </h3>
+                {posts.map(({ node }) => {
+                    const title = node.frontmatter.title || node.fields.slug
+                    return (
+                        <div key={node.fields.slug}>
+                            <h3
+                                style={{
+                                    marginBottom: rhythm(1 / 4),
+                                }}
+                            >
+                                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                                    {title}
+                                </Link>
+                            </h3>
+                            <small>{node.frontmatter.date}</small>
+                            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                        </div>
+                    )
+                })}
             </Layout>
         )
     }
 }
 
 export default TalksIndex
+
 
 export const pageQuery = graphql`
   query {
@@ -32,5 +48,24 @@ export const pageQuery = graphql`
         title
       }
     }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "talk" } } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            type
+          }
+        }
+      }
+    }
   }
 `
+

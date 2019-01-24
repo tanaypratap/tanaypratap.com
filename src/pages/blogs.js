@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
@@ -15,7 +13,7 @@ class BlogsIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={"Blogs"} siteTitle={siteTitle}>
         <SEO
-          title="All posts"
+          title="Blog"
           keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]}
         />
         {posts.map(({ node }) => {
@@ -50,7 +48,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { type: { eq: "blog" } } }) {
       edges {
         node {
           excerpt
@@ -60,6 +58,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            type
           }
         }
       }

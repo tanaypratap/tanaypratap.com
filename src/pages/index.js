@@ -27,7 +27,7 @@ class Index extends React.Component {
           An extrovert by nature, giving talks and workshops come very
           natural to me. After doing a series of talks in premier
           educational institutes in India, did some corporate trainings, and
-          now starting to speak in JS related to conference/meetups.{' '}
+          now starting to speak in JS related conference/meetups.{' '}
         </p>
         <h3>
           {' '}

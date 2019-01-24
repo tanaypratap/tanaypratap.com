@@ -1,6 +1,7 @@
 ---
 title: Grow out of tutorial code, write better React Apps with these 23 tips!
 date: '2017-10-24T22:40:32.169Z'
+type: 'blog'
 ---
 
 ![Graudate from Tutorial Code in React](./graduate-from-tutorial-code.jpg)

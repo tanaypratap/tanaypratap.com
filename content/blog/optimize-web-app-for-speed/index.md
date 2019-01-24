@@ -1,6 +1,7 @@
 ---
 title: Optimize your web app to gain 3X speed!
 date: '2017-10-31T23:46:37.121Z'
+type: 'blog'
 ---
 
 
