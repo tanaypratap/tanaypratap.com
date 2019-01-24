@@ -7,20 +7,39 @@ import { Link } from 'gatsby';
 
 class Index extends React.Component {
   render() {
-    return (
-      <Layout location={this.props.location}>
-        <SEO
-          title="All posts"
-          keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]}
-        />
-        <Bio />
-        See my...
-        <h3> <Link to={"/blog"}> Blogs </Link>  </h3>
-        <h3> <Link to={"/talks"}> Talks </Link> </h3>
-        <h3> <Link to={"/projects"}> Projects </Link> </h3>
-        
+    return <Layout location={this.props.location}>
+        <SEO title="All posts" keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]} />
+        <h3>
+          {' '}
+          <Link to={'/blogs'}> Blogs </Link>{' '}
+        </h3>
+        <p>
+          {' '}
+          I write about React and its ecosystem. I have a habit of sharing
+          what I learn, trying to do it more via the written medium.
+        </p>
+        <h3>
+          {' '}
+          <Link to={'/talks'}> Talks </Link>{' '}
+        </h3>
+        <p>
+          {' '}
+          An extrovert by nature, giving talks and workshops come very
+          natural to me. After doing a series of talks in premier
+          educational institutes in India, did some corporate trainings, and
+          now starting to speak in JS related to conference/meetups.{' '}
+        </p>
+        <h3>
+          {' '}
+        <a href="https://github.com/tanaypratap/" target="_blank">Projects</a>
+        </h3>
+        <p>
+          {' '}
+        Apart from regular work, I learn and create things in public. My projects can be found on <a href="https://github.com/tanaypratap/" target="_blank">
+            Github
+          </a>{' '}
+        </p>
       </Layout>
-    )
   }
 }
 
