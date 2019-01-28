@@ -24,7 +24,7 @@ class Index extends React.Component {
         </h3>
         <p>
           {' '}
-          After doing a series of talks in premier
+          After doing a series of talks across the premier
           educational institutes in India, did some corporate trainings, and
           last year started to speak in JS related conference/meetups.{' '}
         </p>
@@ -35,8 +35,8 @@ class Index extends React.Component {
         <p>
           {' '}
         Apart from regular work, I learn and create things in public. My projects can be found on <a href="https://github.com/tanaypratap/" target="_blank">
-            Github
-          </a>{' '}
+            Github.
+          </a> If you feel like collaborating with me on any project, ping me on any of the channels.
         </p>
       </Layout>
   }
