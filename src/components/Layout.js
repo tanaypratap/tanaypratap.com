@@ -2,13 +2,20 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
+import Bio from './Bio';
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, siteTitle } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
+
+    const isSecondLevelPath = () => {
+      return location.pathname.split("/").length == 2
+    }
+
     let header
 
+    // For first page
     if (location.pathname === rootPath) {
       header = (
         <h1
@@ -31,7 +38,37 @@ class Layout extends React.Component {
           </Link>
         </h1>
       )
-    } else {
+    } 
+    // For second level pages /blogs, /talks etc.
+    else if (isSecondLevelPath()) {
+      header = (
+        <React.Fragment>
+          <h3
+            style={{
+              fontFamily: `Montserrat, sans-serif`,
+              marginTop: 0,
+            }}
+          >
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {siteTitle}
+            </Link>
+          </h3>
+          <h2 style={{ ...scale(1), marginBottom: rhythm(1.5), marginTop: 0, fontWeight: 600 }}>
+            <Link style={{ boxShadow: `none`, textDecoration: `none`, color: `inherit` }} to={`/`}>
+              {title}
+            </Link>
+          </h2>
+        </React.Fragment>
+        )
+    }
+    else { // for third level pages /some-random-blog
       header = (
         <h3
           style={{
@@ -64,6 +101,8 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
+          <hr/>
+          <Bio />
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
