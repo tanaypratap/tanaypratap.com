@@ -8,7 +8,7 @@ import { Link } from 'gatsby';
 class Index extends React.Component {
   render() {
     return <Layout location={this.props.location}>
-        <SEO title="All posts" keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]} />
+        <SEO title="Home" keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]} />
         <h3>
           {' '}
           <Link to={'/blogs'}> Blogs </Link>{' '}
@@ -24,10 +24,9 @@ class Index extends React.Component {
         </h3>
         <p>
           {' '}
-          An extrovert by nature, giving talks and workshops come very
-          natural to me. After doing a series of talks in premier
+          After doing a series of talks across the premier
           educational institutes in India, did some corporate trainings, and
-          now starting to speak in JS related conference/meetups.{' '}
+          last year started to speak in JS related conference/meetups.{' '}
         </p>
         <h3>
           {' '}
@@ -36,8 +35,8 @@ class Index extends React.Component {
         <p>
           {' '}
         Apart from regular work, I learn and create things in public. My projects can be found on <a href="https://github.com/tanaypratap/" target="_blank">
-            Github
-          </a>{' '}
+            Github.
+          </a> If you feel like collaborating with me on any project, ping me on any of the channels.
         </p>
       </Layout>
   }
