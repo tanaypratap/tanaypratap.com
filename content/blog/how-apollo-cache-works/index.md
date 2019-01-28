@@ -1,7 +1,8 @@
 ---
-title: How apollo cache works 🚀? 
+title: Inside Apollo Cache 🚀? 
 date: '2019-02-09T23:46:37.121Z'
 type: 'talk'
+venue: 'InMobi, Marathalli, Bangalore'
 ---
 
 I have been working a lot on GraphQL and Apollo for my new project. So much so that to do exactly what I needed I debugged the entire Apollo Cache codebase and understood what happens on the inside.

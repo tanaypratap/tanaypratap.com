@@ -8,7 +8,7 @@ import { Link } from 'gatsby';
 class Index extends React.Component {
   render() {
     return <Layout location={this.props.location}>
-        <SEO title="All posts" keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]} />
+        <SEO title="Home" keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]} />
         <h3>
           {' '}
           <Link to={'/blogs'}> Blogs </Link>{' '}
