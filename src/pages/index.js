@@ -19,15 +19,6 @@ class Index extends React.Component {
             `react`,
           ]}
         />
-        <h2>
-          {' '}
-          <Link to={'/blogs'}> Blogs </Link>{' '}
-        </h2>
-        <p>
-          {' '}
-          I write about React and its ecosystem. I have a habit of sharing what
-          I learn, trying to do it more via the written medium.
-        </p>
         <h3>
           {' '}
           <Link to={'/talks'}> Talks </Link>{' '}
@@ -37,7 +28,7 @@ class Index extends React.Component {
           Whether it's college grads, corporate tech training, regular JS/React
           meetups or hot shot international conference. I am your guy! I will
           talk about things which I am very passionate about in the most
-          intersting way possible! I promise!{' '}
+          intersting way possible.. I promise!{' '}
         </p>
 
         <h3>
@@ -48,22 +39,33 @@ class Index extends React.Component {
           Join the community of tech enthusiasts, learning how to code, make and
           host their first website with me. Be part of the coding revolution{' '}
         </p>
+        <ul style={{ 'list-style-type': 'none' }}>
+          <li>
+            {' '}
+            <a href="https://www.youtube.com/watch?v=C_R6dvU4820&list=PLzvhQUIpvvuj9nN70USkHJrrSeQ9aiqdB">
+              Start programming with vanillaJS
+            </a>{' '}
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=oUO3-XQAEsY&list=PLzvhQUIpvvug-c-bExl_xFcopeQi_sa29">
+              Learn HTML/CSS by creating your portfolio
+            </a>{' '}
+          </li>
+          <li>
+            {' '}
+            <a href="https://www.youtube.com/watch?v=Qz5_ccyusbg&list=PLzvhQUIpvvuhBNrOVqlhRnhDqz8ob6MeW">
+              Get your tech questions answered in live AMAs
+            </a>
+          </li>
+        </ul>
+        <h3>
+          {' '}
+          <Link to={'/blogs'}> Blogs </Link>{' '}
+        </h3>
         <p>
           {' '}
-          <a href="https://www.youtube.com/watch?v=C_R6dvU4820&list=PLzvhQUIpvvuj9nN70USkHJrrSeQ9aiqdB">
-            Start programming with vanillaJS
-          </a>{' '}
-        </p>
-        <p>
-          <a href="https://www.youtube.com/watch?v=oUO3-XQAEsY&list=PLzvhQUIpvvug-c-bExl_xFcopeQi_sa29">
-            Learn HTML/CSS by creating your portfolio
-          </a>{' '}
-        </p>
-        <p>
-          {' '}
-          <a href="https://www.youtube.com/watch?v=Qz5_ccyusbg&list=PLzvhQUIpvvuhBNrOVqlhRnhDqz8ob6MeW">
-            Get your tech questions answered in live AMAs
-          </a>
+          I write about React and its ecosystem. I have a habit of sharing what
+          I learn, trying to do it more via the written medium.
         </p>
 
         <h3>
