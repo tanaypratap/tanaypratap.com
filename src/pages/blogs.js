@@ -11,10 +11,20 @@ class BlogsIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={"Blogs"} siteTitle={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={'Blogs'}
+        siteTitle={siteTitle}
+      >
         <SEO
           title="Blog"
-          keywords={[`tanaypratap`, `portfolio`, `full-stack`, `javascript`, `react`]}
+          keywords={[
+            `tanaypratap`,
+            `portfolio`,
+            `full-stack`,
+            `javascript`,
+            `react`,
+          ]}
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -25,9 +35,7 @@ class BlogsIndex extends React.Component {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
+                <Link to={node.fields.slug}>{title}</Link>
               </h3>
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
@@ -48,7 +56,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { type: { eq: "blog" } } }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "blog" } } }
+    ) {
       edges {
         node {
           excerpt

@@ -2,7 +2,9 @@
 title: Rewriting Wiki in Teams with Apollo+GraphQL at Microsoft's scale
 date: '2019-04-12T23:46:37.121Z'
 type: 'talk'
-venue: 'The Chancery Pavillion, Residency Rd, Bengaluru, '
+venue: 'The Chancery Pavillion, Residency Rd, Bengaluru'
+event: 'GraphQL Asia'
+eventURL: 'https://www.graphql-asia.org'
 ---
 
 Teams is the fastest growing product of Microsoft. The talk is about how we rewrote the existing Angular+REST based Wiki App into React+Apollo+GraphQL.

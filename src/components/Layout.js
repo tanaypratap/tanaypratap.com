@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
-import Bio from './Bio';
+import Bio from './Bio'
 
 class Layout extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
 
     const isSecondLevelPath = () => {
-      return location.pathname.split("/").length == 2
+      return location.pathname.split('/').length == 2
     }
 
     let header
@@ -24,12 +24,11 @@ class Layout extends React.Component {
             marginBottom: rhythm(1),
             marginTop: 0,
             fontWeight: 600,
-            fontSize: '2rem'
+            fontSize: '2rem',
           }}
         >
           <Link
             style={{
-              boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
             }}
@@ -39,7 +38,7 @@ class Layout extends React.Component {
           </Link>
         </h1>
       )
-    } 
+    }
     // For second level pages /blogs, /talks etc.
     else if (isSecondLevelPath()) {
       header = (
@@ -52,7 +51,6 @@ class Layout extends React.Component {
           >
             <Link
               style={{
-                boxShadow: `none`,
                 textDecoration: `none`,
                 color: `inherit`,
               }}
@@ -61,15 +59,27 @@ class Layout extends React.Component {
               {siteTitle}
             </Link>
           </h3>
-          <h2 style={{ ...scale(1), marginBottom: rhythm(1.5), marginTop: 0, fontWeight: 600 }}>
-            <Link style={{ boxShadow: `none`, textDecoration: `none`, color: `inherit` }} to={`/`}>
+          <h2
+            style={{
+              ...scale(1),
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
+            }}
+          >
+            <Link
+              style={{
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
               {title}
             </Link>
           </h2>
         </React.Fragment>
-        )
-    }
-    else { // for third level pages /some-random-blog
+      )
+    } else {
+      // for third level pages /some-random-blog
       header = (
         <h3
           style={{
@@ -79,7 +89,6 @@ class Layout extends React.Component {
         >
           <Link
             style={{
-              boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
             }}
@@ -102,11 +111,12 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
-          <hr/>
-          <Bio />
-          © {new Date().getFullYear()}, Built with
+          <hr />
+          <Bio />© {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a rel="noopener noreferrer" href="https://www.gatsbyjs.org">
+            Gatsby
+          </a>
         </footer>
       </div>
     )

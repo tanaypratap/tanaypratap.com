@@ -16,10 +16,24 @@ class TalksIndex extends React.Component {
               textDecorationLine: isDone ? 'line-through' : 'none',
             }}
           >
-            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-              {title}
-            </Link>
+            <Link to={node.fields.slug}>{title}</Link>
           </h3>
+          {node.frontmatter.event && !node.frontmatter.eventURL && (
+            <h5 style={{ margin: '2rem 0rem 0.5rem' }}>
+              {node.frontmatter.event}
+            </h5>
+          )}
+          {node.frontmatter.event && node.frontmatter.eventURL && (
+            <h5 style={{ margin: '2rem 0rem 0.5rem' }}>
+              <a
+                rel="noopener noreferrer"
+                href={node.frontmatter.eventURL}
+                target="_blank"
+              >
+                {node.frontmatter.event}
+              </a>
+            </h5>
+          )}
           <small>
             &#128197;{node.frontmatter.date} || 📍{node.frontmatter.venue}
           </small>
@@ -32,12 +46,20 @@ class TalksIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    const upcomingTalks = posts.filter(
-      ({ node }) => new Date(node.frontmatter.rawDate) > Date.now()
-    )
-    const doneTalks = posts.filter(
-      ({ node }) => new Date(node.frontmatter.rawDate) < Date.now()
-    )
+    let upcomingTalks = posts
+      .filter(({ node }) => new Date(node.frontmatter.rawDate) > Date.now())
+      .sort(
+        ({ node: talkA }, { node: talkB }) =>
+          new Date(talkA.frontmatter.rawDate) -
+          new Date(talkB.frontmatter.rawDate)
+      )
+    const doneTalks = posts
+      .filter(({ node }) => new Date(node.frontmatter.rawDate) < Date.now())
+      .sort(
+        ({ node: talkA }, { node: talkB }) =>
+          new Date(talkB.frontmatter.rawDate) -
+          new Date(talkA.frontmatter.rawDate)
+      )
     return (
       <Layout
         location={this.props.location}
@@ -58,6 +80,7 @@ class TalksIndex extends React.Component {
           <h4> Upcoming </h4>
           {this.showPosts(upcomingTalks)}
         </div>
+        <hr />
         <div>
           <h4> Done </h4>
           {this.showPosts(doneTalks, true)}
@@ -93,6 +116,8 @@ export const pageQuery = graphql`
             title
             type
             venue
+            event
+            eventURL
           }
         }
       }
