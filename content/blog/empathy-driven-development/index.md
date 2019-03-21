@@ -7,6 +7,8 @@ event: 'ReactJS Bangalore #44'
 eventURL: 'https://www.meetup.com/ReactJS-Bangalore/events/258461139/'
 ---
 
+![Empathy Driven Development](./empathy-driven-development-tanay-pratap.jpg)
+
 Before joining Microsoft, I haven't heard of something called "accessibility". When working in startups or smaller products we hardly care about the scale of our app's usage or whether that should cater to everyone's needs and abiliites.
 
 However, once you start learning about it there's no stopping. One can always argue that as web developers we need to take care of just so many things. Be it performance, backward browser support, viewport support, security and what not. Now, I am adding one more to this list and this just means more WORK!
