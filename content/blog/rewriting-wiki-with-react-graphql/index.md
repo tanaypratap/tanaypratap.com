@@ -1,11 +1,13 @@
 ---
-title: Rewriting an Angular app with React+Apollo+GraphQL
+title: Rewriting an Angular app with React + Apollo + GraphQL
 date: '2019-04-12T23:46:37.121Z'
 type: 'talk'
 venue: 'The Chancery Pavillion, Residency Rd, Bengaluru'
 event: 'GraphQL Asia'
 eventURL: 'https://www.graphql-asia.org'
 ---
+
+![The organizers shared the poster recently, I feel this came out really well](./tanay-pratap-graphql-asia-poster.jpg)
 
 Teams is the fastest growing product of Microsoft. The talk is about how we rewrote the existing Angular+REST based Wiki App into React+Apollo+GraphQL.
 
