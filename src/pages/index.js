@@ -31,7 +31,7 @@ class Index extends React.Component {
           Whether it's college grads, corporate tech training, regular JS/React
           meetups or hot shot international conference. I am your guy! I will
           talk about things which I am very passionate about in the most
-          intersting way possible.. I promise!{' '}
+          interesting way possible.. I promise!{' '}
         </p>
 
         <h3>

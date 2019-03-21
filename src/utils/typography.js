@@ -7,6 +7,11 @@ Wordpress2016.overrideThemeStyles = () => {
     a: { boxShadow: `none` },
     h3: { fontWeight: 400 },
     h2: { fontWeight: 200 },
+    h1: { fontWeight: 100 },
+    body: {
+      fontWeight: 200,
+      fontSize: 'smaller',
+    },
   }
 }
 

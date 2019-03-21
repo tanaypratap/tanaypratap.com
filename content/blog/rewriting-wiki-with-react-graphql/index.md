@@ -1,5 +1,5 @@
 ---
-title: Rewriting Wiki in Teams with Apollo+GraphQL at Microsoft's scale
+title: Rewriting an Angular app with React+Apollo+GraphQL
 date: '2019-04-12T23:46:37.121Z'
 type: 'talk'
 venue: 'The Chancery Pavillion, Residency Rd, Bengaluru'
