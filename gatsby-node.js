@@ -5,11 +5,30 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const talkPost = path.resolve('./src/templates/talk-post.js')
   return graphql(
     `
       {
-        allMarkdownRemark(
+        talks: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { type: { eq: "talk" } } } 
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      
+       blogs: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { type: { eq: "blog" } } } 
           limit: 1000
         ) {
           edges {
@@ -30,16 +49,34 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+    // Create blogPosts pages.
+    const blogPosts = result.data.blogs.edges
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+    blogPosts.forEach((post, index) => {
+      const previous = index === blogPosts.length - 1 ? null : blogPosts[index + 1].node
+      const next = index === 0 ? null : blogPosts[index - 1].node
 
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    // Create talkPosts pages.
+    const talkPosts = result.data.talks.edges
+
+    talkPosts.forEach((post, index) => {
+      const previous = index === talkPosts.length - 1 ? null : talkPosts[index + 1].node
+      const next = index === 0 ? null : talkPosts[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug,
+        component: talkPost,
         context: {
           slug: post.node.fields.slug,
           previous,
