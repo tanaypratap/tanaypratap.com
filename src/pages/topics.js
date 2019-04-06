@@ -8,7 +8,7 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
-const TagsPage = ({
+const TopicsPage = ({
     data: {
         allMarkdownRemark: { group },
         site: {
@@ -33,7 +33,7 @@ const TagsPage = ({
         </div>
     )
 
-TagsPage.propTypes = {
+TopicsPage.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             group: PropTypes.arrayOf(
@@ -51,7 +51,7 @@ TagsPage.propTypes = {
     }),
 }
 
-export default TagsPage
+export default TopicsPage
 
 export const pageQuery = graphql`
   query {
