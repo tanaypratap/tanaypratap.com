@@ -1,43 +1,64 @@
 import React from "react"
-import PropTypes from "prop-types"
-
-// Components
 import { Link, graphql } from "gatsby"
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
+import { rhythm } from "../utils/typography";
 
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-    } tagged with "${tag}"`
+class TopicCollectionsTemplate extends React.Component {
 
-  return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
-      <Link to="/topics">All tags</Link>
-    </div>
-  )
+  render() {
+    const { pageContext, data } = this.props
+    const { tag } = pageContext
+    const { edges, totalCount } = data.allMarkdownRemark
+    const siteTitle = data.site.siteMetadata.title
+    const tagHeader = `${totalCount} post${
+      totalCount === 1 ? "" : "s"
+      } tagged with "${tag}"`
+
+    return (
+      <Layout
+        location={location}
+        title={tag}
+        siteTitle={siteTitle}
+      >
+        <SEO
+          title={`tanaypratap.com | ${tag}`}
+          keywords={
+            [
+              `tanaypratap`,
+              tag,
+            ]
+          } />
+        {
+          edges.map(({ node }) => {
+            const { slug } = node.fields
+            const title = node.frontmatter.title || tag
+            return (
+              <div key={slug}>
+                <h3 style={{ marginBottom: rhythm(1 / 4) }}>
+                  <Link to={slug}>{title}</Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </div>
+            )
+          })
+        }
+        <Link to="/topics">Other Topics</Link>
+      </Layout>
+    )
+  }
 }
 
-export default Tags
+export default TopicCollectionsTemplate
 
 export const pageQuery = graphql`
   query($tag: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -46,11 +67,14 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt
           fields {
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
+            type
           }
         }
       }
