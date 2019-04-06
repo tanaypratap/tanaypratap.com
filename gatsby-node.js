@@ -1,7 +1,7 @@
 const { graphqlForTalks } = require("./create-pages/create-pages-talks");
 
 const { graphqlForBlogs } = require("./create-pages/create-pages-blogs");
-const { graphqlForTags } = require("./create-pages/create-pages-tags");
+const { graphqlForTags } = require("./create-pages/create-pages-topic");
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 
