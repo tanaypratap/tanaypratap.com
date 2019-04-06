@@ -2,6 +2,7 @@
 title: Responsive Web App Design; things I wish someone would have told me earlier!
 date: '2017-07-06T23:46:37.121Z'
 type: 'blog'
+tags: ['css', 'mobile']
 ---
 
 

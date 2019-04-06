@@ -19,6 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/talk`,
+        name: `talk`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
@@ -57,8 +64,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tanay Pratap's Blog`,
-        short_name: `Tanay's Blog`,
+        name: `tanaypratap.com`,
+        short_name: `tanaypratap.com`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

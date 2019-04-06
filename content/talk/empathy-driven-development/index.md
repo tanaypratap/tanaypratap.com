@@ -5,6 +5,7 @@ type: 'talk'
 venue: 'RazorPay, Lasakar, Hosur Road'
 event: 'ReactJS Bangalore #44'
 eventURL: 'https://www.meetup.com/ReactJS-Bangalore/events/258461139/'
+tags: ['accessibility', 'a11y']
 ---
 
 ![Empathy Driven Development](./empathy-driven-development-tanay-pratap.jpg)

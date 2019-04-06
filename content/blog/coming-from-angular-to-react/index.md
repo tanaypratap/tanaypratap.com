@@ -2,6 +2,7 @@
 title: If you're coming from Angular to React
 date: '2017-04-24T23:46:37.121Z'
 type: 'blog'
+tags: ['angular', 'react']
 ---
 
 

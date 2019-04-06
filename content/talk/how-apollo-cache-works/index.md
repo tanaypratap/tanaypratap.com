@@ -5,6 +5,7 @@ type: 'talk'
 venue: 'InMobi, Marathalli, Bangalore'
 event: 'ReactJS Bangalore #42'
 eventURL: 'https://www.meetup.com/ReactJS-Bangalore/events/257611806/'
+tags: ['graphql', 'react']
 ---
 
 ![The organizers shared the poster recently, I feel this came out really well](./inside-apollo-cache-tanay-pratap.jpg)

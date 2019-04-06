@@ -5,6 +5,7 @@ type: 'talk'
 venue: 'Microsoft, Bellandur, Bangalore'
 event: 'ReactJS Bangalore #39'
 eventURL: 'https://www.meetup.com/ReactJS-Bangalore/events/254937436/'
+tags: ['react']
 ---
 
 ![Tanay Pratap giving the talk at ReactJS Bangalore hosted at Microsoft](./react-under-the-hood-event-pic-tanay-pratap.jpg)

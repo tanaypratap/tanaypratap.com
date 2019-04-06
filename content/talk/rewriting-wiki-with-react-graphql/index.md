@@ -5,6 +5,7 @@ type: 'talk'
 venue: 'The Chancery Pavillion, Residency Rd, Bengaluru'
 event: 'GraphQL Asia'
 eventURL: 'https://www.graphql-asia.org'
+tags: ['graphql' ]
 ---
 
 ![The organizers shared the poster recently, I feel this came out really well](./tanay-pratap-graphql-asia-poster.jpg)
