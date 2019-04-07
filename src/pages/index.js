@@ -31,7 +31,19 @@ class Index extends React.Component {
           Whether it's college grads, corporate tech training, regular JS/React
           meetups or hot shot international conference. I am your guy! I will
           talk about things which I am very passionate about in the most
-          interesting way possible.. I promise!{' '}
+          interesting way possible..{' '}
+        </p>
+
+        <h3>
+          {' '}
+          <Link style={{ boxShadow: `none` }} to={'/posts'}>
+            {' '}
+            posts{' '}
+          </Link>{' '}
+        </h3>
+        <p>
+          {' '}
+          Short posts on LinkedIn or Twitter thread which received a lot of love and views from people, shared here as well.{' '}
         </p>
 
         <h3>
