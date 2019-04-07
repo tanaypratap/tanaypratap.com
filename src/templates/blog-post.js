@@ -78,6 +78,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        linkedinUrl
+        type
         date(formatString: "MMMM DD, YYYY")
       }
     }

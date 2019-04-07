@@ -23,7 +23,7 @@ class Index extends React.Component {
           {' '}
           <Link style={{ boxShadow: `none` }} to={'/talks'}>
             {' '}
-            Talks{' '}
+            talks{' '}
           </Link>{' '}
         </h3>
         <p>
@@ -42,7 +42,7 @@ class Index extends React.Component {
             href="https://youtube.com/tanaypratap"
           >
             {' '}
-            Online Courses{' '}
+            courses{' '}
           </a>{' '}
         </h3>
         <p>
@@ -82,7 +82,7 @@ class Index extends React.Component {
         </ul>
         <h3>
           {' '}
-          <Link to={'/blogs'}> Blogs </Link>{' '}
+          <Link to={'/blogs'}> blogs </Link>{' '}
         </h3>
         <p>
           {' '}
@@ -97,7 +97,7 @@ class Index extends React.Component {
             href="https://github.com/tanaypratap/"
             target="_blank"
           >
-            Projects
+            projects
           </a>
         </h3>
         <p>

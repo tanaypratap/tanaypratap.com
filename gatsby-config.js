@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `tanaypratap.com`,
     author: `Tanay Pratap`,
-    description: `Full stack web developer`,
+    description: `full stack web developer`,
     siteUrl: `https://tanaypratap.com/`,
     social: {
       twitter: `tanaypratap`,
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/talk`,
         name: `talk`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts`,
+        name: `posts`,
       },
     },
     {

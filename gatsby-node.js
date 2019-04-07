@@ -10,6 +10,7 @@ function createIndividualPages(actions, graphql) {
 
   return Promise.all([
     graphqlForBlogs(graphql, createPage),
+    graphqlForBlogs(graphql, createPage, "post"),
     graphqlForTalks(graphql, createPage),
     graphqlForTags(graphql, createPage)
   ])

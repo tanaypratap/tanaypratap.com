@@ -19,12 +19,12 @@ function createBlogPostsPages(result, createPage) {
   });
 }
 
-function graphqlForBlogs(graphql, createPage) {
+function graphqlForBlogs(graphql, createPage, type = "blog") {
   return graphql(`
       {
        blogs: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { type: { eq: "blog" } } } 
+          filter: { frontmatter: { type: { eq: "${type}" } } } 
           limit: 1000
         ) {
           edges {
