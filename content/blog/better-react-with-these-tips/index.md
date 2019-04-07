@@ -1,5 +1,5 @@
 ---
-title: Grow out of tutorial code, write better React Apps with these 23 tips!
+title: 23 tips to write better react
 date: '2017-10-24T22:40:32.169Z'
 type: 'blog'
 tags: ['react']

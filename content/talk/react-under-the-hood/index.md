@@ -1,5 +1,5 @@
 ---
-title: Peek Under React's Hood
+title: peek under react's hood
 date: '2018-11-27T23:46:37.121Z'
 type: 'talk'
 venue: 'Microsoft, Bellandur, Bangalore'

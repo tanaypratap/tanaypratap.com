@@ -1,5 +1,5 @@
 ---
-title: Inside Apollo Cache 🚀?
+title: inside apollo cache 🚀?
 date: '2019-02-09T23:46:37.121Z'
 type: 'talk'
 venue: 'InMobi, Marathalli, Bangalore'

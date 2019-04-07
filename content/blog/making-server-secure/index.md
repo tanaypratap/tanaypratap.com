@@ -1,5 +1,5 @@
 ---
-title: Simple Guide to Make Your Servers Secure
+title: simple guide to make your servers secure
 date: '2017-06-21T23:46:37.121Z'
 type: 'blog'
 tags: ['cloud', 'security']

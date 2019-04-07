@@ -1,5 +1,5 @@
 ---
-title: Empathy Driven Development
+title: empathy driven development
 date: '2019-04-27T23:46:37.121Z'
 type: 'talk'
 venue: 'RazorPay, Lasakar, Hosur Road'

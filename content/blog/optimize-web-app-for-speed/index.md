@@ -1,5 +1,5 @@
 ---
-title: 3 Simple tricks to make your webapp 3X faster!
+title: 3 simple tricks to make your webapp 3X faster!
 date: '2017-10-31T23:46:37.121Z'
 type: 'blog'
 tags: ['performance', 'webpack']
