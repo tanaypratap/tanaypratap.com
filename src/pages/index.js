@@ -10,7 +10,7 @@ class Index extends React.Component {
         siteTitle={'tanaypratap.com'}>
         {/** Fix the siteTitle, this should come from a query */}
         <SEO
-          title="Home"
+          title="home"
           keywords={[
             `tanaypratap`,
             `portfolio`,

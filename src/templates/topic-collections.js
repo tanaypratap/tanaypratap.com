@@ -9,16 +9,15 @@ class TopicCollectionsTemplate extends React.Component {
   render() {
     const { pageContext, data } = this.props
     const { tag } = pageContext
-    const { edges, totalCount } = data.allMarkdownRemark
+    const { edges } = data.allMarkdownRemark
     const siteTitle = data.site.siteMetadata.title
     return (
       <Layout
-        location={location}
         title={tag}
         siteTitle={siteTitle}
       >
         <SEO
-          title={`tanaypratap.com | ${tag}`}
+          title={tag}
           keywords={
             [
               `tanaypratap`,

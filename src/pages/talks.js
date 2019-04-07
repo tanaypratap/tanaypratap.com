@@ -67,7 +67,7 @@ class TalksIndex extends React.Component {
         siteTitle={siteTitle}
       >
         <SEO
-          title="Talks"
+          title="talks"
           keywords={[
             `tanaypratap`,
             `portfolio`,
