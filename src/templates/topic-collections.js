@@ -11,10 +11,6 @@ class TopicCollectionsTemplate extends React.Component {
     const { tag } = pageContext
     const { edges, totalCount } = data.allMarkdownRemark
     const siteTitle = data.site.siteMetadata.title
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"
-      } tagged with "${tag}"`
-
     return (
       <Layout
         location={location}
@@ -38,13 +34,13 @@ class TopicCollectionsTemplate extends React.Component {
                 <h3 style={{ marginBottom: rhythm(1 / 4) }}>
                   <Link to={slug}>{title}</Link>
                 </h3>
+                <div style={{ fontWeight: 500 }}>{`[${node.frontmatter.type.toLowerCase()}]`}</div>
                 <small>{node.frontmatter.date}</small>
                 <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </div>
             )
           })
         }
-        <Link to="/topics">Other Topics</Link>
       </Layout>
     )
   }

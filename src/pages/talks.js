@@ -63,7 +63,7 @@ class TalksIndex extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={'Talks'}
+        title={'talks'}
         siteTitle={siteTitle}
       >
         <SEO

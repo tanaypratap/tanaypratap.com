@@ -48,7 +48,7 @@ function createPagesForTags(createPage, posts) {
   // Make tag pages
   tags.forEach(tag => {
     createPage({
-      path: `/${_.kebabCase(tag)}/`,
+      path: `/${_.kebabCase(tag)}`,
       component: tagTemplate,
       context: {
         tag,

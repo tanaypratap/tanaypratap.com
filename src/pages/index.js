@@ -1,6 +1,4 @@
 import React from 'react'
-
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { Link } from 'gatsby'
@@ -8,7 +6,9 @@ import { Link } from 'gatsby'
 class Index extends React.Component {
   render() {
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} title={"home"}
+        siteTitle={'tanaypratap.com'}>
+        {/** Fix the siteTitle, this should come from a query */}
         <SEO
           title="Home"
           keywords={[
