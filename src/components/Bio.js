@@ -78,7 +78,7 @@ function Bio() {
                 imgStyle={{ borderRadius: `50%` }}
               />
               <p>
-                Builds {TeamsUrl()} for Microsoft by the day. Learns stuff from Internet by the night. Teaches code to newbies on weekends. Or share knowledge with peers via talks, blogs, conferences, meetups. Sometimes get featured on podasts as well! <br /> Connect with me on the social media tool of your choice.
+                I build {TeamsUrl()} for Microsoft by the day, learn stuff from Internet by the night. On weekends I teach coding to newbies. Or share knowledge with peers via talks, blogs, conferences, meetups. Sometimes I do  get featured on podasts as well! <br /> he/him. <br /> Connect with me on the social media tool of your choice.
             </p>
             </div>
             <div style={{ padding: `${rhythm(1)}` }}>

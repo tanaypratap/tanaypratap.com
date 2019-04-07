@@ -60,6 +60,7 @@ class Layout extends React.Component {
           <div style={{ padding: `${rhythm(1)}` }}>
             <Topics />
           </div>
+          <hr />
           <Bio />
           <div>
             © {new Date().getFullYear()}, Built with
