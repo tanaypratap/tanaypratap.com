@@ -3,7 +3,7 @@ title: try this game dev course
 date: '2019-03-04T22:40:32.169Z'
 type: 'post'
 from: 'linkedIn'
-tags: ['fitness']
+tags: ['learning']
 linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:6503632578984153088/'
 ---
 
