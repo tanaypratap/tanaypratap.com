@@ -78,7 +78,7 @@ function Bio() {
                 imgStyle={{ borderRadius: `50%` }}
               />
               <p>
-                Hi! I am Tanay! I build {TeamsUrl()} for Microsoft by the day, learn stuff from Internet by the night. <br /> he/him. <br /> Connect with me on the social media tool of your choice.
+                Hi! I am Tanay! I build {TeamsUrl()} for Microsoft by the day, learn stuff from Internet by the night. <strong> he/him. </strong> Connect with me on the social media tool of your choice.
             </p>
             </div>
             <div style={{ padding: `${rhythm(1)}` }}>
