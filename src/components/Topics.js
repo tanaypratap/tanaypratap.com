@@ -19,6 +19,10 @@ const pages = [
   {
     toLink: '/blogs',
     text: 'blogs'
+  },
+  {
+    toLink: '/posts',
+    text: 'posts'
   }
 ]
 
