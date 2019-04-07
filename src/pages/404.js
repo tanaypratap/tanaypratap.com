@@ -10,6 +10,7 @@ class NotFoundPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
+      // This page needs some work
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="404: Not Found" />
         <h1>Not Found</h1>
