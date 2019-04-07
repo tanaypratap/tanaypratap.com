@@ -64,7 +64,7 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
         return (
           <div style={{ marginBottom: rhythm(2.5) }}>
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: `flex` }}>
               <Image
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={author}
