@@ -8,8 +8,15 @@ import Bio from './Bio'
 
 function buttonDownForm() {
   return (
+    <div>
+      <p> If you like what you just read, consider subscribing, new content will be delivered to your inbox.. :)
+        <br />
+        ...no spams, whatsoever, I promise!
+      </p>
 
-    <iframe scrolling="no" style={{ width: '100%', height: '220px', border: '1px #ccc solid' }} src="https://buttondown.email/tanaypratap?as_embed=true" />
+      <iframe scrolling="no" style={{ width: '100%', height: '220px', border: '1px #ccc solid' }} src="https://buttondown.email/tanaypratap?as_embed=true" />
+
+    </div>
   );
 }
 

@@ -46,7 +46,7 @@ function TeamsUrl() {
 
 function SocialMedia({ text, mediaLink }) {
   return (
-    <span>
+    <span key={mediaLink}>
       {" | "}
       <a target="_blank" href={mediaLink}>
         {text}
