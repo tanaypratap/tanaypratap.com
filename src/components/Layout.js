@@ -6,6 +6,13 @@ import Topics from '../components/Topics'
 import { rhythm, scale } from '../utils/typography'
 import Bio from './Bio'
 
+function buttonDownForm() {
+  return (
+
+    <iframe scrolling="no" style={{ width: '100%', height: '220px', border: '1px #ccc solid' }} src="https://buttondown.email/tanaypratap?as_embed=true" />
+  );
+}
+
 class Layout extends React.Component {
   render() {
     const { location, title, children, siteTitle } = this.props
@@ -57,6 +64,7 @@ class Layout extends React.Component {
         {children}
         <footer>
           <hr />
+          {buttonDownForm()}
           <div style={{ padding: `${rhythm(1)}` }}>
             <Topics />
           </div>
