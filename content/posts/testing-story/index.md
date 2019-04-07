@@ -12,6 +12,8 @@ I am sure you have heard the story of that woodcutter who was slow at cutting tr
 
 So, I went and talked to my manager and asked to buy a training and after hearing my justification he asked me to go ahead with it. Two weekends back, I didn't go out, did nothing else, just did the course and wrote a hell lot of tests, wrote my own version of testing framework and what not, re-wrote all examples in jest docs and went through a lot of youtube videos as well! Basically two days of non-stop testing!
 
+> > Moral of the story is sometimes we need help
+
 
 First week the result was not apparent, but today, after things have settled down in my brain, I wrote tests for a PR in 3-4 hours, which is way fast than my previous records.
 

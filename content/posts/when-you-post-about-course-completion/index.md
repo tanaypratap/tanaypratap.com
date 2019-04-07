@@ -17,4 +17,4 @@ Here's an idea which would make your post much more useful and I think even more
 
 Same thing can be done for the books you're reading, or the blog you just shared.
 
-P.S. Most of the authors are on LinkedIn and have a public profile. You can tag them in the post and thank them as well!
+**P.S.** Most of the authors are on LinkedIn and have a public profile. You can tag them in the post and thank them as well!
