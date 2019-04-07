@@ -13,11 +13,11 @@ class BlogsIndex extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={'Blogs'}
+        title={'blogs'}
         siteTitle={siteTitle}
       >
         <SEO
-          title="Blog"
+          title="blogs"
           keywords={[
             `tanaypratap`,
             `portfolio`,

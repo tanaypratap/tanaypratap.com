@@ -1,6 +1,7 @@
 const { graphqlForTalks } = require("./create-pages/create-pages-talks");
 
 const { graphqlForBlogs } = require("./create-pages/create-pages-blogs");
+const { graphqlForTags } = require("./create-pages/create-pages-topic");
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 
@@ -9,7 +10,8 @@ function createIndividualPages(actions, graphql) {
 
   return Promise.all([
     graphqlForBlogs(graphql, createPage),
-    graphqlForTalks(graphql, createPage)
+    graphqlForTalks(graphql, createPage),
+    graphqlForTags(graphql, createPage)
   ])
 }
 

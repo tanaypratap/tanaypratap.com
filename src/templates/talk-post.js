@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
@@ -13,7 +11,9 @@ class TalkPostTemplate extends React.Component {
         const { previous, next } = this.props.pageContext
 
         return (
-            <Layout location={this.props.location} title={siteTitle}>
+            <Layout
+                location={this.props.location}
+                siteTitle={siteTitle}>
                 <SEO title={post.frontmatter.title} description={post.excerpt} />
                 <h1>{post.frontmatter.title}</h1>
                 <p

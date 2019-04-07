@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Topics from '../components/Topics'
+
 import { rhythm, scale } from '../utils/typography'
 import Bio from './Bio'
 
@@ -12,75 +14,8 @@ class Layout extends React.Component {
     const isSecondLevelPath = () => {
       return location.pathname.split('/').length == 2
     }
-
-    let header
-
-    // For first page
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1),
-            marginBottom: rhythm(1),
-            marginTop: 0,
-            fontWeight: 600,
-            fontSize: '2rem',
-          }}
-        >
-          <Link
-            style={{
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            TANAY<span style={{ fontWeight: 300 }}>PRATAP</span>.COM
-          </Link>
-        </h1>
-      )
-    }
-    // For second level pages /blogs, /talks etc.
-    else if (isSecondLevelPath()) {
-      header = (
-        <React.Fragment>
-          <h3
-            style={{
-              fontFamily: `Montserrat, sans-serif`,
-              marginTop: 0,
-            }}
-          >
-            <Link
-              style={{
-                textDecoration: `none`,
-                color: `inherit`,
-              }}
-              to={`/`}
-            >
-              {siteTitle}
-            </Link>
-          </h3>
-          <h2
-            style={{
-              ...scale(1),
-              marginBottom: rhythm(1.5),
-              marginTop: 0,
-            }}
-          >
-            <Link
-              style={{
-                textDecoration: `none`,
-                color: `inherit`,
-              }}
-              to={`/`}
-            >
-              {title}
-            </Link>
-          </h2>
-        </React.Fragment>
-      )
-    } else {
-      // for third level pages /some-random-blog
-      header = (
+    const header = (
+      <React.Fragment>
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
@@ -94,11 +29,20 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            {siteTitle}
           </Link>
         </h3>
-      )
-    }
+        <h2
+          style={{
+            ...scale(1),
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
+          }}
+        >
+          {title}
+        </h2>
+      </React.Fragment>
+    )
     return (
       <div
         style={{
@@ -109,14 +53,25 @@ class Layout extends React.Component {
         }}
       >
         {header}
+        <Topics />
         {children}
         <footer>
           <hr />
-          <Bio />© {new Date().getFullYear()}, Built with
+          <div style={{ padding: `${rhythm(1)}` }}>
+            <Topics />
+          </div>
+          <hr />
+          <Bio />
+          <div>
+            © {new Date().getFullYear()}, Built with
           {` `}
-          <a rel="noopener noreferrer" href="https://www.gatsbyjs.org">
-            Gatsby
+            <a rel="noopener noreferrer" href="https://www.gatsbyjs.org">
+              Gatsby
           </a>
+          </div>
+
+
+
         </footer>
       </div>
     )
