@@ -67,3 +67,11 @@ As I said earlier, the course left a lot of grounds to cover. After you have don
 If you follow and complete the entire course, you make something like this: [my booklist app](http://bit.ly/tanay-graphl-tut-app)
 
 However, the course doesn't cover how to host it online. I have hosted the entire frontend and backend server for free. If you like to know how to host a React+GraphQL app, subscribe to the newsletter below and whenever I write it, you'll get it straight into your inbox.
+
+
+### Comments?
+I would love to get your likes/comments/thoughts on the social medium of your choice. If you want to comment on....
+
+**LinkedIn:** [go to this linkedin post](https://www.linkedin.com/feed/update/urn:li:activity:6521021369948434432)
+
+**Twitter:** [go to this twitter post](https://twitter.com/tanaypratap/status/1115257404894191618)
