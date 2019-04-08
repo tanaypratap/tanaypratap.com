@@ -64,18 +64,20 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
         return (
           <div style={{ marginBottom: rhythm(2.5) }}>
-            <div style={{ display: `flex` }}>
+            <div>
               <Image
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={author}
                 style={{
                   marginRight: rhythm(1 / 2),
-                  marginBottom: 30,
-                  minWidth: 50,
+                  marginBottom: 5,
+                  minWidth: 63,
+                  minHeight: 63,
                   borderRadius: `100%`,
                   alignSelf: 'center',
+                  float: 'left'
                 }}
-                imgStyle={{ borderRadius: `50%` }}
+                imgStyle={{ borderRadius: `50%`, marginBottom: `0` }}
               />
               <p>
                 Hi! I am Tanay! I build {TeamsUrl()} for Microsoft by the day, learn stuff from Internet by the night. <strong> he/him. </strong> Connect with me on the social media tool of your choice.
