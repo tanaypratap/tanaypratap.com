@@ -16,4 +16,4 @@ However, once you start learning about it there's no stopping. One can always ar
 
 Yes, it is. But it's not too much, it's not much once you get the hang of it. So, I would suggest that you attend the talk and we start small, we can see how extremely small steps taken by you can lead to a better accessibility score. Web has evolved and it's our duty as the frontrunners to make it accessible for everyone: develop with empathy!
 
-This event is free of cost. However, it needs prior reservation. [RSVP at the ReactJS Meetup #44]('https://www.meetup.com/ReactJS-Bangalore/events/258461139/')
+This event is free of cost. However, it needs some prior reservation. [RSVP at the ReactJS Meetup #44]('https://www.meetup.com/ReactJS-Bangalore/events/258461139/')
