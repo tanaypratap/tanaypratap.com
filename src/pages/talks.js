@@ -12,11 +12,10 @@ class TalksIndex extends React.Component {
         <div key={node.fields.slug}>
           <h3
             style={{
-              marginBottom: rhythm(1 / 4),
-              textDecorationLine: isDone ? 'line-through' : 'none',
+              marginBottom: rhythm(1 / 4)
             }}
           >
-            <Link to={node.fields.slug}>{title}</Link>
+            <Link to={node.fields.slug}>{isDone ? "✓ " + title : title}</Link>
           </h3>
           {node.frontmatter.event && !node.frontmatter.eventURL && (
             <h5 style={{ margin: '2rem 0rem 0.5rem' }}>
