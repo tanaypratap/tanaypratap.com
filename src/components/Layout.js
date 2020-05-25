@@ -9,15 +9,45 @@ import Bio from './Bio'
 function buttonDownForm() {
   return (
     <div>
-      <p> If you like what you just read, consider subscribing, new content will be delivered to your inbox.. :)
+      <p>
+        {' '}
+        If you like what you just read, consider subscribing, new content will
+        be delivered to your inbox.. :)
         <br />
         ...no spams, whatsoever, I promise!
       </p>
-
-      <iframe scrolling="no" style={{ width: '100%', height: '220px', border: '1px #ccc solid' }} src="https://buttondown.email/tanaypratap?as_embed=true" />
-
+      <form
+        style={{
+          border: '1px solid #ccc',
+          padding: '3px',
+          textAlign: 'center',
+        }}
+        action="https://tinyletter.com/tanaypratap"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://tinyletter.com/tanaypratap', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+      >
+        <p>
+          <label for="tlemail">Enter your email address</label>
+        </p>
+        <p>
+          <input
+            type="text"
+            style={{ width: '140px' }}
+            name="email"
+            id="tlemail"
+          />
+        </p>
+        <input type="hidden" value="1" name="embed" />
+        <input type="submit" value="Subscribe" />
+        <p>
+          <a href="https://tinyletter.com" target="_blank">
+            powered by TinyLetter
+          </a>
+        </p>
+      </form>
     </div>
-  );
+  )
 }
 
 class Layout extends React.Component {
@@ -79,14 +109,11 @@ class Layout extends React.Component {
           <Bio />
           <div>
             © {new Date().getFullYear()}, Built with
-          {` `}
+            {` `}
             <a rel="noopener noreferrer" href="https://www.gatsbyjs.org">
               Gatsby
-          </a>
+            </a>
           </div>
-
-
-
         </footer>
       </div>
     )
