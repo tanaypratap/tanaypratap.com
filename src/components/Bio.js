@@ -25,6 +25,14 @@ const socialMediaLinks = [
     text: 'instagram',
     mediaLink: 'https://instagram.com/tanaypratap'
   },
+  {
+    text: 'telegram page for students',
+    mediaLink: 'https://t.me/tanaypratap'
+  },
+  {
+    text: 'discord server for students',
+    mediaLink: 'https://bit.ly/tanaydiscord'
+  }
   // {
   //   text: 'facebook',
   //   mediaLink: 'https://facebook.com/prataptanay'
