@@ -80,7 +80,7 @@ class Layout extends React.Component {
             <Topics />
           </div> */}
           <hr />
-          {/* <Bio /> */}
+          <Bio />
           <div>
             © {new Date().getFullYear()}, Built with
             {` `}

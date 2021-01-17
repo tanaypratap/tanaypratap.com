@@ -60,7 +60,7 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
         return (
           <div style={{ marginBottom: rhythm(2.5) }}>
-            <div>
+            {/* <div>
               <Image
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={author}
@@ -79,7 +79,7 @@ function Bio() {
                 Hi! I am Tanay! I work at Microsoft. I spend my time online to help students get a well paying job. I am going to  <strong> place 100+ students</strong> in 2021.
                 Follow me to get help or see how I am doing all of it.
             </p>
-            </div>
+            </div> */}
             <div style={{ padding: `${rhythm(1)}` }}>
               <p>
                 {
