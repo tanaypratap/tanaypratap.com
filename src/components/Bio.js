@@ -11,7 +11,7 @@ const socialMediaLinks = [
   },
   {
     text: 'linkedin',
-    mediaLink: 'https://www.linkedin.com/in/tpratap/'
+    mediaLink: 'https://www.linkedin.com/in/tanaypratap/'
   },
   {
     text: 'github',
@@ -25,24 +25,12 @@ const socialMediaLinks = [
     text: 'instagram',
     mediaLink: 'https://instagram.com/tanaypratap'
   },
-  {
-    text: 'facebook',
-    mediaLink: 'https://facebook.com/prataptanay'
-  }
+  // {
+  //   text: 'facebook',
+  //   mediaLink: 'https://facebook.com/prataptanay'
+  // }
 ]
 
-
-function TeamsUrl() {
-  return (
-    <a
-      rel="noopener noreferrer"
-      href="https://products.office.com/en-us/microsoft-teams/group-chat-software"
-      target="_blank"
-    >
-      Teams
-              </a>
-  )
-}
 
 function SocialMedia({ text, mediaLink }) {
   return (
@@ -80,7 +68,8 @@ function Bio() {
                 imgStyle={{ borderRadius: `50%`, marginBottom: `0` }}
               />
               <p>
-                Hi! I am Tanay! I build {TeamsUrl()} for Microsoft by the day, learn stuff from Internet by the night. <strong> he/him. </strong> Connect with me on the social media tool of your choice.
+                Hi! I am Tanay! I work at Microsoft. I spend my time online to help students get a well paying job. I am going to  <strong> place 100+ students</strong> in 2021.
+                Follow me to get help or see how I am doing all of it.
             </p>
             </div>
             <div style={{ padding: `${rhythm(1)}` }}>

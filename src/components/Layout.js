@@ -11,41 +11,15 @@ function buttonDownForm() {
     <div>
       <p>
         {' '}
-        If you like what you just read, consider subscribing, new content will
-        be delivered to your inbox.. :)
-        <br />
-        ...no spams, whatsoever, I promise!
+        Subsciribing would make it easy to stay connected. I don't spam. 
       </p>
-      <form
-        style={{
-          border: '1px solid #ccc',
-          padding: '3px',
-          textAlign: 'center',
-        }}
-        action="https://tinyletter.com/tanaypratap"
-        method="post"
-        target="popupwindow"
-        onsubmit="window.open('https://tinyletter.com/tanaypratap', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
-      >
-        <p>
-          <label for="tlemail">Enter your email address</label>
-        </p>
-        <p>
-          <input
-            type="text"
-            style={{ width: '140px' }}
-            name="email"
-            id="tlemail"
-          />
-        </p>
-        <input type="hidden" value="1" name="embed" />
-        <input type="submit" value="Subscribe" />
-        <p>
-          <a href="https://tinyletter.com" target="_blank">
-            powered by TinyLetter
-          </a>
-        </p>
-      </form>
+      <iframe src="https://tanaypratap.substack.com/embed" 
+      width="100%" 
+      height="250px" 
+      style={{ borderRadius: "0.25rem", background: "white"}}
+      frameborder="0" scrolling="no">
+
+      </iframe>
     </div>
   )
 }
@@ -97,14 +71,14 @@ class Layout extends React.Component {
         }}
       >
         {header}
-        <Topics />
+        {/* <Topics /> */}
         {children}
         <footer>
           <hr />
           {buttonDownForm()}
-          <div style={{ padding: `${rhythm(1)}` }}>
+          {/* <div style={{ padding: `${rhythm(1)}` }}>
             <Topics />
-          </div>
+          </div> */}
           <hr />
           <Bio />
           <div>
