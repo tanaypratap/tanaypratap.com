@@ -3,7 +3,7 @@ const { graphqlForTalks } = require("./create-pages/create-pages-talks");
 const { graphqlForBlogs } = require("./create-pages/create-pages-blogs");
 const { graphqlForTags } = require("./create-pages/create-pages-topic");
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
+const path = require('path');
 
 function createIndividualPages(actions, graphql) {
   const { createPage } = actions;
@@ -12,7 +12,14 @@ function createIndividualPages(actions, graphql) {
     graphqlForBlogs(graphql, createPage),
     graphqlForBlogs(graphql, createPage, "post"),
     graphqlForTalks(graphql, createPage),
-    graphqlForTags(graphql, createPage)
+    graphqlForTags(graphql, createPage),
+    createPage({
+      path: `/`,
+      component: path.resolve("./src/templates/root.js"),
+      context : {
+        slug: "/pages/"
+      }
+    })
   ])
 }
 
