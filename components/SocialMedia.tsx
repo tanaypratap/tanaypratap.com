@@ -63,28 +63,28 @@ export default function SocialMedia() {
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 5, lg: 8 }}>
         <StatsCard
           title={"Followers "}
-          stat={"100,000+"}
+          stat={"103,956+"}
           icon={
             <Image src='/images/instagram.png' width='70' height='70' alt='' />
           }
         />
         <StatsCard
           title={"Followers "}
-          stat={"150,000+"}
+          stat={"158,861+"}
           icon={
             <Image src='/images/linkedin.png' width='70' height='70' alt='' />
           }
         />
         <StatsCard
           title={"Followers"}
-          stat={"100,000+"}
+          stat={"117,024+"}
           icon={
             <Image width='70' height='70' alt='' src='/images/twitter.png' />
           }
         />
         <StatsCard
           title={"Followers"}
-          stat={"40,000+"}
+          stat={"64,400+"}
           icon={
             <Image width='70' height='70' alt='' src='/images/youtube.png' />
           }

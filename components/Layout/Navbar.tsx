@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useRouter } from "next/router";
 import {
   Box,
   Flex,
@@ -14,7 +12,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -93,7 +90,10 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"lg"}
+                cursor={navItem.disabled ? "not-allowed" : "auto"}
                 fontWeight={500}
+                // pointerEvents={navItem.disabled ? "none" : "auto"}
+                opacity=''
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
@@ -232,6 +232,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
 interface NavItem {
   label: string;
+  disabled?: boolean;
   subLabel?: string;
   children?: Array<NavItem>;
   href?: string;
@@ -248,35 +249,39 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "explore",
+    disabled: true,
     children: [
       {
         label: "By Category",
-        subLabel: "Find your dream design job",
+        subLabel:
+          "Search by categories like books, newsletters, videos and podcasts.",
         href: "#",
       },
       {
         label: "By Topic",
-        subLabel: "An exclusive list for contract work",
+        subLabel:
+          "Search by topics like business, engineering, start-ups and growth.",
         href: "#",
       },
     ],
   },
   {
     label: "about",
+    disabled: true,
     children: [
       {
         label: "My Story",
-        subLabel: "Trending Design to inspire you",
+        subLabel: "My decade long journey in bits and pieces.",
         href: "#",
       },
       {
         label: "Media kit",
-        subLabel: "Up-and-coming Designers",
+        subLabel: "For PR and media.",
         href: "#",
       },
       {
         label: "Contact",
-        subLabel: "Up-and-coming Designers",
+        subLabel: "Connect with me here.",
         href: "#",
       },
     ],

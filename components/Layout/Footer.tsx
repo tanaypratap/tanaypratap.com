@@ -59,29 +59,28 @@ export default function Footer() {
             </Stack>
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Company</ListHeader>
-            <Link href={"#"}>About us</Link>
-            <Link href={"#"}>Blog</Link>
-            <Link href={"#"}>Contact us</Link>
-            <Link href={"#"}>Pricing</Link>
-            <Link href={"#"}>Testimonials</Link>
+            <ListHeader>Quick Links</ListHeader>
+            <Link href={"#"}>My Story</Link>
+            <Link href={"#"}>New? Start here</Link>
+            <Link href={"#"}>Media Queries</Link>
+            <Link href={"#"}>Contact</Link>
+            <Link href={"#"}>About</Link>
+          </Stack>
+          <Stack align={"flex-start"}>
+            <ListHeader>Explore</ListHeader>
+            <Link href={"#"}>Newsletters</Link>
+            <Link href={"#"}>Talks</Link>
+            <Link href={"#"}>Books</Link>
+            <Link href={"#"}>Research Papers</Link>
+            <Link href={"#"}>Podcasts</Link>
+            <Link href={"#"}>Essays</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
-            <Link href={"#"}>Help Center</Link>
             <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Legal</Link>
+            <Link href={"#"}>Community Guidelines</Link>
             <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Satus</Link>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <ListHeader>Connect</ListHeader>
-            <Link href={"#"}>Help Center</Link>
-            <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Legal</Link>
-            <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Satus</Link>
-          </Stack>
+          </Stack>{" "}
         </SimpleGrid>
       </Container>
       {/* <Box

@@ -86,7 +86,12 @@ export default function Newsletter() {
           spacing={8}
           align={"center"}
         >
-          <Icon as={NotificationIcon} w={24} h={24} />
+          <script
+            async
+            data-uid='ea035d32a1'
+            src='https://creative-founder-4484.ck.page/ea035d32a1/index.js'
+          ></script>
+          {/* <Icon as={NotificationIcon} w={24} h={24} />
           <Stack align={"center"} spacing={2}>
             <Heading
               textTransform={"uppercase"}
@@ -126,7 +131,7 @@ export default function Newsletter() {
             >
               Subscribe
             </Button>
-          </Stack>
+          </Stack> */}
         </Stack>
         {/* </Flex> */}
       </Stack>
