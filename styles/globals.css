@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/** markdown css **/
+@import url("./markdown.css");
+
+:root {
+  --primary: #0d3344;
+  --primary-dark: #052634;
+  --secondary: #49a0eb;
+  --secondary-overlay: #49a0ebb3;
+  --secondary-focus: #285780;
+  --secondary-bg: #49a0eb33;
+  --white: #ffffff;
+  --black: #000000;
+  --off-white: #fcfcfc;
+  --text-color: #767d86;
+  --text-color-dark: #474646;
+  --text-color-secondary: #d9dbe1;
+  --lg-screen: 800px;
+  --shadow: 0 1rem 2rem rgba(180, 180, 180, 0.2);
+  --shadow-s: 0 0.5rem 1rem rgba(180, 180, 180, 0.1);
+  --pale-pink: #f3a39c;
+  --border-grey: #e4e5e7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  font-family: "Anek Latin", sans-serif !important;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/** wall of love **/
+
+.tweets-masonry-grid {
+  display: flex;
+  width: 100%;
+  padding: 2rem 0;
+}
+.tweets-masonry-grid-column {
+  padding: 1rem;
+  background-clip: padding-box;
+}
+
+.tweets-masonry-grid-column > .tweet-card {
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/*loading*/
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 80vh;
+}
+
+/**handbook import*/
+.handbook-markdown {
+  line-height: 1.5;
+  color: var(--primary);
+  padding: 4rem 1rem;
+}
+
+.handbook-markdown.legal {
+  font-size: 0.75rem;
+}
+
+.handbook-markdown > hr {
+  width: 100%;
+  height: 0.25rem;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+/* base */
+
+@media only screen and (max-width: 768px) {
+  .tanaypratap-logo {
+    width: 115px;
+  }
+}
