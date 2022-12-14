@@ -116,8 +116,8 @@ const stats = [
         newsletter won the prize for best newsletter. The Productive
         Professional is a book I wrote that contains all of my productivity
         advice. However, I wanted to write about something major, so I did some
-        study on education and came up with a paper titled 'Creating MOOCs for
-        Effective Online Learning Experience' which won the prize for best
+        study on education and came up with a paper titled `Creating MOOCs for
+        Effective Online Learning Experience` which won the prize for best
         paper. This is all about mass writing; I also write on LinkedIn on a
         regular basis and am one of the 15 top voices on LinkedIn for 2022.
       </>

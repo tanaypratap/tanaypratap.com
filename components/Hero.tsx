@@ -50,7 +50,7 @@ export default function Hero({
             as a teacher. I resigned from my position at Microsoft because I
             believe education is still an unsolved problem, and I am now totally
             dedicated to ensuring that everyone can access education, not just
-            the wealthy few. I'm working on implementing the tried and testing
+            the wealthy few. I`m working on implementing the tried and testing
             model of closing the skill gap between technical and engineering
             roles into non-technical and business roles.
             <br />
@@ -58,7 +58,7 @@ export default function Hero({
             should become your credentials. So, currently working on providing
             students with a curriculum of proof of work and industry-focused
             courses in an affordable and accessible manner through Invact. Want
-            to know how? It's a long story, so follow me to learn more. I am
+            to know how? It`s a long story, so follow me to learn more. I am
             telling it in parts every day.
             <br />
             <br />
