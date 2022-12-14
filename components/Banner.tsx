@@ -15,10 +15,10 @@ export default function Banner() {
   return (
     <Center
       height={"90vh"}
-      // backgroundImage={`url("./images/tanay-banner.jpg") !important`}
-      // backgroundPosition='center'
-      // backgroundRepeat='no-repeat'
-      // backgroundSize={"cover"}
+      backgroundImage={`url("./tanay-banner.png") !important`}
+      backgroundPosition='center'
+      backgroundRepeat='no-repeat'
+      backgroundSize={"cover"}
     >
       {/* <Box
         as='video'

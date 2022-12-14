@@ -26,7 +26,7 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box p={{ md: "0 10%" }}>
+    <Box p={{ md: "0 10%" }} bgColor='#3D53BF'>
       <Flex
         minH={"60px"}
         flexDir={{ base: "row-reverse" }}

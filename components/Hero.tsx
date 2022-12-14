@@ -46,26 +46,23 @@ export default function Hero({
             {title}
           </Heading>
           <Text fontSize={"lg"} lineHeight='1.5'>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free! Snippy is a rich coding
-            snippets app that lets you create your own code snippets, categorize
-            them, and even sync them in the cloud so you can use them anywhere.
-            All that is free! Snippy is a rich coding snippets app that lets you
-            create your own code snippets. Snippy is a rich coding snippets app
-            that lets you create your own code snippets, categorize them, and
-            even sync them.
+            I have spent my entire life working as an engineer and moonlighting
+            as a teacher. I resigned from my position at Microsoft because I
+            believe education is still an unsolved problem, and I am now totally
+            dedicated to ensuring that everyone can access education, not just
+            the wealthy few. I'm working on implementing the tried and testing
+            model of closing the skill gap between technical and engineering
+            roles into non-technical and business roles.
             <br />
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free! Snippy is a rich coding
-            snippets app that lets you create your own code snippets, categorize
-            them, and even sync them in the cloud so you can use them anywhere.
+            I believe that your work should become your degree, and your craft
+            should become your credentials. So, currently working on providing
+            students with a curriculum of proof of work and industry-focused
+            courses in an affordable and accessible manner through Invact. Want
+            to know how? It's a long story, so follow me to learn more. I am
+            telling it in parts every day.
             <br />
-            Even sync them in the cloud so you can use them anywhere. All that
-            is free! Snippy is a rich coding
             <br />
-            <Link href='/about'>
+            {/* <Link href='/about'>
               <Text
                 color='blue.600'
                 fontSize='20'
@@ -74,7 +71,7 @@ export default function Hero({
               >
                 Read the whole story!
               </Text>
-            </Link>
+            </Link> */}
           </Text>
         </Stack>
         {image && (

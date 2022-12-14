@@ -20,6 +20,10 @@ import {
   IconProps,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ConvertkitSignupForm from "./ConvertKitForm";
+// import ConvertKitForm from "convertkit-react";
+
+const FORM_ID = 3032616;
 
 export default function Newsletter() {
   return (
@@ -78,20 +82,16 @@ export default function Newsletter() {
           position={"relative"}
           w={"full"}
         > */}
-        <Stack
+        {/* <Stack
           boxShadow={"lg"}
           bg={useColorModeValue("white", "gray.700")}
           rounded={"lg"}
           p={16}
           spacing={8}
           align={"center"}
-        >
-          <script
-            async
-            data-uid='ea035d32a1'
-            src='https://creative-founder-4484.ck.page/ea035d32a1/index.js'
-          ></script>
-          {/* <Icon as={NotificationIcon} w={24} h={24} />
+        > */}
+        <ConvertkitSignupForm formId={"3032616"} />
+        {/* <Icon as={NotificationIcon} w={24} h={24} />
           <Stack align={"center"} spacing={2}>
             <Heading
               textTransform={"uppercase"}
@@ -101,7 +101,7 @@ export default function Newsletter() {
               Subscribe
             </Heading>
             <Text fontSize={"lg"} color={"gray.500"}>
-              Subscribe to our newsletter & stay up to date!
+              Subscribe to my newsletter & stay up to date!
             </Text>
           </Stack>
           <Stack
@@ -132,14 +132,14 @@ export default function Newsletter() {
               Subscribe
             </Button>
           </Stack> */}
-        </Stack>
+        {/* </Stack> */}
         {/* </Flex> */}
       </Stack>
     </Container>
   );
 }
 
-const NotificationIcon = createIcon({
+export const NotificationIcon = createIcon({
   displayName: "Notification",
   viewBox: "0 0 128 128",
   path: (
