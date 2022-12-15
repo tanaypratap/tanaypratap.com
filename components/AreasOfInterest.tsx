@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import {
   Stack,
   Container,
@@ -8,6 +8,7 @@ import {
   Heading,
   SimpleGrid,
   Divider,
+  Link,
 } from "@chakra-ui/react";
 
 export default function AreasOfInterest() {
@@ -24,28 +25,14 @@ export default function AreasOfInterest() {
       <Stack direction={{ base: "column", lg: "row" }} m={"0 13%"}>
         <Stack flex={1} justify={{ lg: "center" }} m='2rem 0'>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-            {stats.map((stat) => (
-              <Box
-                key={stat.title}
-                p='3rem'
-                borderRadius={"1rem"}
-                boxShadow='md'
-              >
-                <Text
-                  fontFamily={"heading"}
-                  textAlign='left'
-                  fontSize={"3xl"}
-                  mb={3}
-                >
-                  {stat.title}
-                </Text>
-                <Divider
-                  width='100px'
-                  borderTop='3px solid #1a365d'
-                  marginBottom='0.5rem'
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <ShowMore
+                  title={stat.title}
+                  description={stat.content}
+                  // key={index}
                 />
-                <Text fontSize={"xl"}>{stat.content}</Text>
-              </Box>
+              </div>
             ))}
           </SimpleGrid>
         </Stack>
@@ -53,6 +40,45 @@ export default function AreasOfInterest() {
     </Box>
   );
 }
+
+const ShowMore = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: JSX.Element;
+}) => {
+  const [showMore, setShowMore] = useState(true);
+  return (
+    <Box key={title} p='3rem' borderRadius={"1rem"} boxShadow='md'>
+      <Text fontFamily={"heading"} textAlign='left' fontSize={"3xl"} mb={3}>
+        {title}
+      </Text>
+      <Divider
+        width='100px'
+        borderTop='3px solid #1a365d'
+        marginBottom='0.5rem'
+      />
+      <Text fontSize={"xl"} noOfLines={showMore ? [1, 2, 3] : undefined}>
+        {description}
+      </Text>
+      <Link
+        marginTop='1rem'
+        display='inline-block'
+        color='blue.600'
+        _hover={{
+          textDecor: "none",
+        }}
+        fontSize='larger'
+        onClick={() => {
+          setShowMore(!showMore);
+        }}
+      >
+        {showMore ? "Show more" : "Show less"}
+      </Link>
+    </Box>
+  );
+};
 
 const StatsText = ({ children }: { children: ReactNode }) => (
   <Text as={"span"} fontWeight={700}>

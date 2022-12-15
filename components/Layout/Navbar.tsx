@@ -245,7 +245,8 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "newsletters",
-    href: "/newsletters",
+    href: "/#",
+    disabled: true,
   },
   {
     label: "explore",

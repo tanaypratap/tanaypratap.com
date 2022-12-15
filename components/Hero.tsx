@@ -45,24 +45,25 @@ export default function Hero({
           >
             {title}
           </Heading>
-          <Text fontSize={"lg"} lineHeight='1.5'>
+          <Text fontSize={"large"} lineHeight='1.5'>
             I have spent my entire life working as an engineer and moonlighting
-            as a teacher. I resigned from my position at Microsoft because I
-            believe education is still an unsolved problem, and I am now totally
-            dedicated to ensuring that everyone can access education, not just
-            the wealthy few. I`m working on implementing the tried and testing
-            model of closing the skill gap between technical and engineering
-            roles into non-technical and business roles.
-            <br />
+            as a teacher. I resigned from my position as a Sr. Software Engineer
+            at Microsoft because I believe education is still an unsolved
+            problem, and I am now totally dedicated to ensuring that everyone
+            can access education, not just the wealthy few. I&apos;m working on
+            implementing the tried and testing model of closing the skill gap
+            between technical and engineering roles into non-technical and
+            business roles.
+          </Text>
+          <Text fontSize={"large"} marginTop='0.5rem !important'>
             I believe that your work should become your degree, and your craft
             should become your credentials. So, currently working on providing
             students with a curriculum of proof of work and industry-focused
             courses in an affordable and accessible manner through Invact. Want
-            to know how? It`s a long story, so follow me to learn more. I am
-            telling it in parts every day.
-            <br />
-            <br />
-            {/* <Link href='/about'>
+            to know how? It&apos;s a long story, so follow me to learn more. I
+            am telling it in parts every day.
+          </Text>
+          {/* <Link href='/about'>
               <Text
                 color='blue.600'
                 fontSize='20'
@@ -72,7 +73,6 @@ export default function Hero({
                 Read the whole story!
               </Text>
             </Link> */}
-          </Text>
         </Stack>
         {image && (
           <Flex

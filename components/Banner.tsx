@@ -19,6 +19,7 @@ export default function Banner() {
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundSize={"cover"}
+      pos='relative'
     >
       {/* <Box
         as='video'
@@ -39,19 +40,27 @@ export default function Banner() {
         }}
       /> */}
 
-      <Stack maxW={"2xl"} textAlign='center' spacing={6}>
+      <Stack
+        maxW={"2xl"}
+        textAlign='initial'
+        spacing={6}
+        position='absolute'
+        top='141px'
+        color='#FFF'
+        left='251px'
+      >
         <Heading
           as='h1'
           fontWeight={700}
           lineHeight={1.2}
-          fontSize={useBreakpointValue({ base: "3xl", md: "5xl" })}
+          fontSize={useBreakpointValue({ base: "3xl", md: "8xl" })}
         >
           Tanay Pratap
         </Heading>
         <Stack direction={"row"}>
           <Heading
             as='h4'
-            size={useBreakpointValue({ base: "initial", md: "md" })}
+            fontSize={useBreakpointValue({ base: "initial", md: "3xl" })}
           >
             Entrepreneur | Teacher | Author | Mentor | Engineer
           </Heading>

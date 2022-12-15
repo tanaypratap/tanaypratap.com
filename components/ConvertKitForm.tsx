@@ -69,7 +69,7 @@ const ConvertkitSignupForm: React.FC<
   // }
 
   return (
-    <Stack boxShadow={"lg"} rounded={"lg"} p={16} spacing={8} align={"center"}>
+    <Stack boxShadow={"lg"} rounded={"lg"} p={12} spacing={8} align={"center"}>
       {/* <ConvertkitSignupForm formId={"3032616"} /> */}
       <Icon as={NotificationIcon} w={24} h={24} />
       <Stack align={"center"} spacing={2}>
@@ -84,21 +84,26 @@ const ConvertkitSignupForm: React.FC<
           Subscribe to my newsletter & stay up to date!
         </Text>
       </Stack>
-      {success ? (
+      {success && (
         <Text textAlign={"center"}>
           You&apos;re in! Thank you for subscribing.
           <br />
-          Please check your mailbox for confirmation
+          <strong>Please check your mailbox for confirmation</strong>
         </Text>
-      ) : (
+      )}
+      {success === false && (
         <Text>Apologies, an error occurred. Please try again.</Text>
       )}
       {success === undefined ? (
-        <Stack spacing={4} direction={{ base: "column", md: "row" }} w={"full"}>
-          <form
-            target='_blank'
-            className={`space-around flex w-full flex-grow justify-center`}
-            onSubmit={onSubmit}
+        <form
+          target='_blank'
+          className={`space-around flex w-full flex-grow justify-center`}
+          onSubmit={onSubmit}
+        >
+          <Stack
+            spacing={4}
+            direction={{ base: "column", md: "row" }}
+            w={"full"}
           >
             <Input
               type={"email"}
@@ -126,8 +131,8 @@ const ConvertkitSignupForm: React.FC<
             >
               {children ?? "Subscribe"}
             </Button>
-          </form>
-        </Stack>
+          </Stack>
+        </form>
       ) : null}
     </Stack>
     // <>

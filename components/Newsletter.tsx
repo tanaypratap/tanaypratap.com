@@ -36,7 +36,7 @@ export default function Newsletter() {
           lineHeight={1.2}
           fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
         >
-          Join the 10,000+ others who receive Tanay’s newsletter
+          Join the 10,765+ others who receive Tanay’s newsletter
         </Heading>
       </Stack>
       <Stack
@@ -47,32 +47,16 @@ export default function Newsletter() {
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Text>
-            <Text as='b'>
-              Snippy is a rich coding snippets app that lets you create your own
-              code snippets, categorize them, and even sync them in the cloud so
-              you can use them anywhere.{" "}
-            </Text>
-            All that is free! Snippy is a rich coding snippets app that lets you
-            create your own code snippets, categorize them, and even sync them
-            in the cloud so you can use them anywhere. All that is free! Snippy
-            is a rich coding snippets app that lets you create your own code
-            snippets, categorize them, and even sync them in the cloud so you
-            can use them anywhere.
-            <br />
-            All that is free! Snippy is a rich coding snippets app that lets you
-            create your own code snippets, categorize them, and even sync them
-            in the cloud so you can use them anywhere. All that is free! Snippy
-            is a rich coding snippets app that lets you create your own code
-            snippets, categorize them, and even sync them in the cloud so you
-            can use them anywhere. All that is free! Snippy is a rich coding
-            snippets app that lets you create your own code snippets, categorize
-            them, and even sync them in the cloud so you can use them anywhere.
-            <br />
-            All that is free! Snippy is a rich coding snippets app that lets you
-            create your own code snippets, categorize them, and even sync them
-            in the cloud so you can use them anywhere. All that is free! Snippy
-            is a rich coding snippets app.
+          <Text fontSize='lg'>
+            My letters reflect the pinnacle of my professional experiences.
+            Every week, I share a pearl of wisdom from my 10-year career path
+            working for start-ups to huge companies in a variety of sectors and
+            professions. From being a kid from a small town to becoming a mentor
+            of thousands of students who find their way into a tech career.
+          </Text>
+          <Text fontSize='lg' marginTop='1rem !important'>
+            You`ll learn something new weekly about mentorship, education, tech,
+            start-ups, growth, and entrepreneurship.
           </Text>
         </Stack>
         {/* <Flex
