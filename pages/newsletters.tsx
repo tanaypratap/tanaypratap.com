@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Key } from "react";
 import {
   Alert,
   AlertIcon,
@@ -16,7 +16,7 @@ import Newsletter from "../components/Newsletter";
 import SignatureContentNewsletters from "../components/SignatureContentNewsletters";
 import SuccessStories from "../components/SuccessStories";
 import { getAllFilesFrontMatter } from "../lib/posts";
-import { tagColor } from "../components/UI/tagColor";
+import { tagColor, types } from "../components/UI/tagColor";
 // import { seo } from "config";
 import TagComponent from "../components/UI/tag";
 import BlogPost from "../components/blogPost";
@@ -39,6 +39,10 @@ const Newsletters = ({ posts }: any) => {
 
   const filteredPosts = (tag: any) => {
     const blogResults = posts.filter((post: any) => post.tags.includes(tag));
+    setBlogPost(blogResults);
+  };
+  const filteredPostsByType = (type: any) => {
+    const blogResults = posts.filter((post: any) => post.types.includes(type));
     setBlogPost(blogResults);
   };
 
@@ -79,19 +83,15 @@ const Newsletters = ({ posts }: any) => {
           url,
         }}
       /> */}
-
       <Head>
         <title>newsletters | tanaypratap</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
       <Hero title='Tanay’s Newsletters' image />
       <Hero title='Why you should read Tanay’s newsletter?' />
       <SuccessStories />
       {/* <SignatureContentNewsletters /> */}
-
       <Newsletter />
-
       <Heading
         as='h2'
         fontWeight={700}
@@ -102,7 +102,6 @@ const Newsletters = ({ posts }: any) => {
       >
         Browse by Categories
       </Heading>
-
       <Box
         as='section'
         fontSize='16px'
@@ -142,6 +141,24 @@ const Newsletters = ({ posts }: any) => {
           })}
         </Flex>
 
+        <Flex
+          justify='center'
+          align='center'
+          direction='row'
+          wrap='wrap'
+          m='1.5rem 0'
+        >
+          {types.map((type: any, index: Key | null | undefined) => {
+            return (
+              <Box key={index}>
+                <TagComponent onClick={() => filteredPostsByType(type)}>
+                  {type}
+                </TagComponent>
+              </Box>
+            );
+          })}
+        </Flex>
+
         {blogPost.length > 0 ? (
           <BlogPost posts={blogPost} />
         ) : (
@@ -169,6 +186,8 @@ export async function getStaticProps() {
     (a: any, b: any) =>
       Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   );
+
+  // console.log({ posts });
 
   return { props: { posts } };
 }

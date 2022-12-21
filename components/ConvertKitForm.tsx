@@ -45,7 +45,7 @@ const ConvertkitSignupForm: React.FC<
           body,
         });
 
-        console.info({ data });
+        // console.info({ data });
 
         setSuccess(true);
       } catch {

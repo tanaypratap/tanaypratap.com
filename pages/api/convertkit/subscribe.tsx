@@ -6,7 +6,7 @@ const BASE_URL = "https://api.convertkit.com/v3";
 function subscribeToForm(params: { formId: string; email: string }) {
   const url = [BASE_URL, `forms`, params.formId, "subscribe"].join("/");
 
-  console.info({ params });
+  // console.info({ params });
 
   const headers = new Headers({
     "Content-Type": "application/json; charset=utf-8",
@@ -28,7 +28,7 @@ async function subscribeToFormHandler(
 ) {
   const body = req.body;
 
-  console.info({ body });
+  // console.info({ body });
 
   // best to validate this with Zod...
 

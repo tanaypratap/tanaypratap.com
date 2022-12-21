@@ -56,8 +56,8 @@ export default function Navbar() {
         >
           <Image
             src={"/tanay-logo.png"}
-            alt=''
-            width='160'
+            alt='tanaypratap logo'
+            width='140'
             height='100'
             className='tanaypratap-logo'
           />
@@ -90,6 +90,7 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"lg"}
+                color={"#fff"}
                 cursor={navItem.disabled ? "not-allowed" : "auto"}
                 fontWeight={500}
                 // pointerEvents={navItem.disabled ? "none" : "auto"}

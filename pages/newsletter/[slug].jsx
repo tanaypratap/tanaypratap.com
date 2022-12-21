@@ -79,7 +79,7 @@ const Newsletter = ({ mdxSource, frontMatter }) => {
                       color={color}
                       onClick={() =>
                         push({
-                          pathname: "/blog/",
+                          pathname: "/newsletter/",
                           query: { tag },
                         })
                       }

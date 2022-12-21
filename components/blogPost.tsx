@@ -18,7 +18,7 @@ const BlogPost = ({ posts }: any) => {
   return (
     <>
       {posts.map((post: any) => {
-        const { slug, title, summary, tags, publishedAt } = post;
+        const { slug, title, summary, tags, publishedAt, types } = post;
 
         const thisYear = publishedAt.substring(0, 4);
 
@@ -59,6 +59,29 @@ const BlogPost = ({ posts }: any) => {
                   key={tag}
                 >
                   {tag}
+                </TagComponent>
+              );
+            })}
+
+            <br />
+
+            {types.map((type: any) => {
+              // const color = tagColor[tag];
+
+              return (
+                <TagComponent
+                  // color={color}
+                  onClick={() =>
+                    router.push({
+                      pathname: "/newsletter/",
+                      query: { type },
+                    })
+                  }
+                  p='.5rem'
+                  fontSize='md'
+                  key={type}
+                >
+                  {type}
                 </TagComponent>
               );
             })}

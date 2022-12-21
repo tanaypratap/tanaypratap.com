@@ -6,6 +6,8 @@ export const tagColor: TagColor = {
   markdown: { bgColor: "#168aad", hover: "#1a759f" },
 };
 
+export const types = ["video", "newsletter", "podcast"];
+
 export type TagColor = {
   [key: string]: {
     bgColor: string;

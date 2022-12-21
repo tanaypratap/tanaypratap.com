@@ -108,6 +108,10 @@ button {
 
 /* base */
 
+.tanaypratap-logo {
+  width: 140px;
+}
+
 @media only screen and (max-width: 768px) {
   .tanaypratap-logo {
     width: 115px;
