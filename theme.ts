@@ -1,5 +1,6 @@
 // 1. Import the extendTheme function
 import { extendTheme } from "@chakra-ui/react";
+import { StepsStyleConfig as Steps } from "chakra-ui-steps";
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
@@ -15,4 +16,10 @@ const fonts = {
   heading: `"Anek Latin", sans-serif`,
 };
 
-export const theme = extendTheme({ colors, fonts });
+export const theme = extendTheme({
+  colors,
+  fonts,
+  components: {
+    Steps,
+  },
+});

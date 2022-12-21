@@ -34,7 +34,7 @@ const options = {
   keys: ["title"],
 };
 
-const Newsletters = ({ posts }: any) => {
+const Explore = ({ posts }: any) => {
   const router = useRouter();
 
   const fuse = new Fuse(posts, options);
@@ -234,4 +234,4 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-export default Newsletters;
+export default Explore;
