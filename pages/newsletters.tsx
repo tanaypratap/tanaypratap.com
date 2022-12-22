@@ -1,13 +1,18 @@
+/* eslint-disable react/no-children-prop */
 import { useState, useEffect, useCallback, Key } from "react";
 import {
   Alert,
   AlertIcon,
   Box,
+  InputGroup,
+  Center,
+  InputLeftElement,
   Flex,
   Heading,
   Input,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Fuse from "fuse.js";
@@ -92,7 +97,112 @@ const Newsletters = ({ posts }: any) => {
       <SuccessStories />
       {/* <SignatureContentNewsletters /> */}
       <Newsletter />
-      <Heading
+      <Center>
+        <Flex
+          justify='center'
+          my={16}
+          direction={"column"}
+          gap={8}
+          alignItems='center'
+        >
+          <Heading
+            as='h2'
+            fontWeight={700}
+            textTransform='uppercase'
+            lineHeight={1.2}
+            textAlign='center'
+            fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+          >
+            Browse by Topics
+          </Heading>
+          <InputGroup>
+            <InputLeftElement
+              pointerEvents='none'
+              children={<SearchIcon color='gray.300' />}
+            />
+            <Input
+              onChange={(e) => {
+                setSearchValue(e.target.value);
+              }}
+              value={searchValue}
+              variant='flushed'
+              placeholder='What are you looking for?'
+              maxWidth='100%'
+            />
+          </InputGroup>
+        </Flex>
+      </Center>
+      <Box
+        display='flex'
+        margin={"1rem auto"}
+        maxWidth={"6xl"}
+        flexDirection={{ base: "column", sm: "row" }}
+      >
+        <Box
+          display='flex'
+          flex='0.5'
+          marginRight='3'
+          alignItems='initial'
+          flexDirection='column'
+          paddingLeft='2rem'
+          flexDir='column'
+        >
+          <Heading as='h2' size='lg' mb={4}>
+            Filter
+          </Heading>
+          <Heading as='h3' size='md'>
+            By Topics
+          </Heading>
+          <Flex
+            direction='column'
+            justify='center'
+            align='initial'
+            wrap='wrap'
+            m='1rem 0'
+          >
+            {Object.keys(tagColor).map((tag, index) => {
+              const color = tagColor[tag];
+
+              return (
+                <Box key={index}>
+                  <TagComponent onClick={() => filteredPosts(tag)}>
+                    {tag}
+                  </TagComponent>
+                </Box>
+              );
+            })}
+          </Flex>
+        </Box>
+
+        <Box
+          display='flex'
+          flex='2'
+          flexDirection='column'
+          justifyContent='initial'
+          marginTop={{ base: "3", sm: "0" }}
+        >
+          <Heading as='h2' size='lg' mb={4}>
+            Posts - {blogPost.length} results
+          </Heading>
+          {blogPost.length > 0 ? (
+            <BlogPost posts={blogPost} />
+          ) : (
+            <Alert
+              status='info'
+              borderRadius='md'
+              // d='flex'
+              justifyContent='center'
+              mx='auto'
+              maxWidth='500px'
+              fontWeight='500'
+            >
+              <AlertIcon />
+              No blog post has been found!
+            </Alert>
+          )}
+        </Box>
+      </Box>
+      {/* <Heading
         as='h2'
         fontWeight={700}
         textTransform='uppercase'
@@ -141,24 +251,6 @@ const Newsletters = ({ posts }: any) => {
           })}
         </Flex>
 
-        <Flex
-          justify='center'
-          align='center'
-          direction='row'
-          wrap='wrap'
-          m='1.5rem 0'
-        >
-          {types.map((type: any, index: Key | null | undefined) => {
-            return (
-              <Box key={index}>
-                <TagComponent onClick={() => filteredPostsByType(type)}>
-                  {type}
-                </TagComponent>
-              </Box>
-            );
-          })}
-        </Flex>
-
         {blogPost.length > 0 ? (
           <BlogPost posts={blogPost} />
         ) : (
@@ -175,7 +267,7 @@ const Newsletters = ({ posts }: any) => {
             No blog post has been found!
           </Alert>
         )}
-      </Box>
+      </Box> */}
     </>
   );
 };
