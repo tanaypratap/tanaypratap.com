@@ -91,9 +91,8 @@ const DesktopNav = () => {
                 href={navItem.href ?? "#"}
                 fontSize={"lg"}
                 color={"#fff"}
-                cursor={navItem.disabled ? "not-allowed" : "auto"}
+                cursor={"pointer"}
                 fontWeight={500}
-                // pointerEvents={navItem.disabled ? "none" : "auto"}
                 opacity=''
                 _hover={{
                   textDecoration: "none",
@@ -246,45 +245,44 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "newsletters",
-    href: "/#",
-    disabled: true,
+    href: "/newsletters",
   },
   {
     label: "explore",
-    disabled: true,
+    href: "/explore",
     children: [
       {
         label: "By Category",
         subLabel:
           "Search by categories like books, newsletters, videos and podcasts.",
-        href: "#",
+        href: "/explore",
       },
       {
         label: "By Topic",
         subLabel:
           "Search by topics like business, engineering, start-ups and growth.",
-        href: "#",
+        href: "/explore",
       },
     ],
   },
   {
     label: "about",
-    disabled: true,
+    href: "/my-story",
     children: [
       {
         label: "My Story",
         subLabel: "My decade long journey in bits and pieces.",
-        href: "#",
+        href: "/my-story",
       },
       {
         label: "Media kit",
         subLabel: "For PR and media.",
-        href: "#",
+        href: "/media-kit",
       },
       {
         label: "Contact",
         subLabel: "Connect with me here.",
-        href: "#",
+        href: "/contact",
       },
     ],
   },

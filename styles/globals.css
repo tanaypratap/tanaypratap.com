@@ -117,3 +117,16 @@ button {
     width: 115px;
   }
 }
+
+/* timeline */
+
+/* hide scrollbar but allow scrolling */
+.timeline {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
