@@ -229,7 +229,7 @@ export async function getStaticProps() {
       Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   );
 
-  console.log({ posts });
+  // console.log({ posts });
 
   return { props: { posts } };
 }
